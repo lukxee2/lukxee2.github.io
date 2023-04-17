@@ -1,0 +1,93 @@
+body {
+    font-size: 1em;
+    line-height: 1.7;
+    color: #222;
+    font-family: "Open Sans",sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+header {
+    display: block;
+}
+
+p {
+    margin-top: 0;
+    font-family: "Open Sans",sans-serif;
+}
+
+footer {
+    border-top: 1px solid #ddd;
+    font-size: .8em;
+    text-align: center;
+    padding: 32px;
+    margin-top: 32px;
+    display: block;
+}
+
+.site-wrap {
+    margin: auto;
+    padding: 16px;
+    padding-bottom: 64px;
+}
+
+.header {
+    text-align: left;
+}
+
+.header__logo {
+    margin: auto;
+}
+
+.header>.header__tagline {
+    margin: 0 0 8px 0;
+    font-size: .9em;
+}
+
+.header__navigation {
+    padding-bottom: 16px;
+    border-top: 1px solid #ddd;
+    margin-bottom: 16px;
+    padding-top: 8px;
+    font-weight: 600;
+}
+
+.pure-menu-horizontal {
+    width: 100%;
+    white-space: nowrap;
+}
+
+.pure-menu {
+    box-sizing: border-box;
+}
+
+.project-listing {
+    margin: 0 -8px 0 -8px;
+}
+
+.pure-g {
+    letter-spacing: -.31em;
+    text-rendering: optimizespeed;
+    font-family: FreeSans,Arimo,"Droid Sans",Helvetica,Arial,sans-serif;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+}
+
+.pure-g [class*=pure-u] {
+    font-family: sans-serif;
+}
+
+.project-listing__item {
+    padding: 8px;
+    position: relative;
+    margin-bottom: 16px;
+}
+
