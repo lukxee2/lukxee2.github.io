@@ -6555,3 +6555,13 @@ h3 {
 .padding-lg {
     padding: 16px
 }
+
+
+.link {
+    color: #333;
+    text-decoration:underline;
+}
+
+.list {
+    margin-bottom: 2px !important;
+}
