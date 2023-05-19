@@ -1,10 +1,10 @@
 // Function to update badge status and background color
 function updateBadgeStatus(badgeElement, isOnline) {
     if (isOnline) {
-    badgeElement.textContent = 'Online';
-    badgeElement.classList.add('bg-green');
+    // No need to do anything, the default value is online
     } else {
     badgeElement.textContent = 'Offline';
+    badgeElement.classList.remove('bg-green');
     }
 }
 
