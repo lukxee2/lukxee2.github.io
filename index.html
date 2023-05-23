@@ -66,3 +66,51 @@
 </body>
 <script src="./files/js/main.js"></script>
 </html>
+<!-- create a program that turns the badge to offline if the url is unavailable -->
+<script>
+    function isSiteOnline(url) {
+        var apiUrl = 'https://api.geekflare.com/up';
+        return fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ "url": url })
+        })
+        .then(function (response) {
+            if (response.status === 200) {
+                return response.json();
+            } else {
+                throw new Error('Failed to get site status');
+            }
+        })
+        .then(function (data) {
+            return data.status === 'UP';
+        })
+        .catch(function () {
+            return false;
+        });
+    }
+    
+    function updateBadge(url, badge) {
+        isSiteOnline(url)
+            .then(function (online) {
+                if (online) {
+                    // ok
+                } else {
+                    badge.classList.remove('bg-green');
+                    badge.textContent = 'Offline';
+                }
+            });
+    }
+    
+    var links = document.querySelectorAll('.link');
+    var badges = document.querySelectorAll('.badge');
+    
+    for (var i = 0; i < links.length; i++) {
+        var link = links[i];
+        var badge = badges[i];
+        var url = link.href.replace(/^https?:\/\//, '');
+        updateBadge(url, badge);
+    }
+</script>
